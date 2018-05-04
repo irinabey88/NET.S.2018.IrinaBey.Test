@@ -1,0 +1,10 @@
+C:\Users\MIB\Desktop\NET.W.2017.LastName.Test\Task1.Console\bin\Debug\Task1.Console.exe.config
+C:\Users\MIB\Desktop\NET.W.2017.LastName.Test\Task1.Console\bin\Debug\Task1.Console.exe
+C:\Users\MIB\Desktop\NET.W.2017.LastName.Test\Task1.Console\bin\Debug\Task1.Console.pdb
+C:\Users\MIB\Desktop\NET.W.2017.LastName.Test\Task1.Console\obj\Debug\Task1.Console.csproj.CoreCompileInputs.cache
+C:\Users\MIB\Desktop\NET.W.2017.LastName.Test\Task1.Console\obj\Debug\Task1.Console.exe
+C:\Users\MIB\Desktop\NET.W.2017.LastName.Test\Task1.Console\obj\Debug\Task1.Console.pdb
+C:\Users\MIB\Desktop\NET.W.2017.LastName.Test\Task1.Console\bin\Debug\Task1.Solution.dll
+C:\Users\MIB\Desktop\NET.W.2017.LastName.Test\Task1.Console\bin\Debug\Task1.Solution.pdb
+C:\Users\MIB\Desktop\NET.W.2017.LastName.Test\Task1.Console\obj\Debug\Task1.Console.csprojResolveAssemblyReference.cache
+C:\Users\MIB\Desktop\NET.W.2017.LastName.Test\Task1.Console\obj\Debug\Task1.Console.csproj.CopyComplete
