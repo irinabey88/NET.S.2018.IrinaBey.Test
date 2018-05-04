@@ -40,7 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\Service\IPasswordCreateService.cs" />
+    <Compile Include="Interfaces\Repository\IRepository.cs" />
+    <Compile Include="Interfaces\Service\IPasswordCheckService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\SqlPasswordRepository.cs" />
+    <Compile Include="Services\PasswordCheckSevice.cs" />
+    <Compile Include="Services\PasswordCreateService.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
