@@ -19,15 +19,12 @@ namespace Task3.Solution
             this._stock.MarketChanged += Update;
         }
 
-        public void Update(object info, StockInfoEventArgs stockInfo)
-        {
-            StockInfo sInfo = (StockInfo)info;
-            this._stock.Market(this, new StockInfoEventArgs(sInfo.USD, sInfo.Euro));
-
-            if (sInfo.USD > 30)
-                Console.WriteLine("Брокер {0} продает доллары;  Курс доллара: {1}", this.Name, sInfo.USD);
+        public void Update(object sender, StockInfoEventArgs stockInfo)
+        {                   
+            if (stockInfo.USD > 30)
+                Console.WriteLine("Брокер {0} продает доллары;  Курс доллара: {1}", this.Name, stockInfo.USD);
             else
-                Console.WriteLine("Брокер {0} покупает доллары;  Курс доллара: {1}", this.Name, sInfo.USD);
+                Console.WriteLine("Брокер {0} покупает доллары;  Курс доллара: {1}", this.Name, stockInfo.USD);
         }
 
         public void StopTrade()
