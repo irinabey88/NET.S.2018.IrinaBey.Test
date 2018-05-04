@@ -37,7 +37,7 @@ namespace Task6.Tests
 
             NumberGenerator<double> number = new NumberGenerator<double>();
 
-            CollectionAssert.AreEqual(number.Generate(10, 2, 1, (x, y) => y - x/y), expected);
+            CollectionAssert.AreEqual(number.Generate(10, 2, 1, (x, y) => y + x/y), expected);
         }
     }
 }
