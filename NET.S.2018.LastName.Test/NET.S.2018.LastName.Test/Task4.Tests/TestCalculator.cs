@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 using Task4;
+using Task4.Solution;
 
 namespace Task4.Tests
 {
@@ -12,26 +14,33 @@ namespace Task4.Tests
 
         [Test]
         public void Test_AverageByMean()
-        {
-            Calculator calculator = new Calculator();
+        {           
 
             double expected = 8.3636363;
 
-            double actual = calculator.CalculateAverage(values, AveragingMethod.Mean);
-
-            Assert.AreEqual(expected, actual, 0.000001);
+            Assert.AreEqual(expected, Calculator.CalculateAverage(values, x => x.Sum() / x.Count), 0.000001);
         }
 
         [Test]
         public void Test_AverageByMedian()
-        {
-            Calculator calculator = new Calculator();
+        {            
 
             double expected = 8.0;
+            Func<List<double>, double> calcFunc = (listValue) =>
+            {
+                var sortedValues = listValue.OrderBy(x => x).ToList();
 
-            double actual = calculator.CalculateAverage(values, AveragingMethod.Median);
+                int n = sortedValues.Count;
 
-            Assert.AreEqual(expected, actual, 0.000001);
+                if (n % 2 == 1)
+                {
+                    return sortedValues[(n - 1) / 2];
+                }
+
+                return (sortedValues[sortedValues.Count / 2 - 1] + sortedValues[n / 2]) / 2;
+            };
+
+            Assert.AreEqual(expected, Calculator.CalculateAverage(values, calcFunc));
         }
     }
 }
