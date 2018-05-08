@@ -1,4 +1,7 @@
-﻿using Task5.Solution;
+﻿using Task5.Solution.Entities;
+using Task5.Solution.Entities.DocumentParts;
+using Task5.Solution.Entities.DocumentParts.Base;
+using Task5.Solution.Entities.Extensions;
 
 namespace Task5.Console
 {
@@ -11,15 +14,32 @@ namespace Task5.Console
         static void Main(string[] args)
         {
             List<DocumentPart> parts = new List<DocumentPart>
-                {
-                    new DataText(x =>  "\\textbf{" + x + "}") {Text = "Some plain text"},
-                    new HtmlText(x => "<b>" + x + "</b>") {Text = "google.com", Url = "https://www.google.by/"},
-                    new DataText(x => "**" + x + "**") {Text = "Some bold text"}
-                };
+            {
+                new PlainText {Text = "Some plain text"},
+                new Hyperlink {Text = "google.com", Url = "https://www.google.by/"},
+                new BoldText {Text = "Some bold text"}
+            };
 
             Document document = new Document(parts);
 
-            Console.WriteLine(document.Convert());           
+            foreach (var part in document.ConnvertToHtml())
+            {
+                Console.WriteLine(part);
+            }
+
+            Console.WriteLine();
+
+            foreach (var part in document.ConnvertToPlainText())
+            {
+                Console.WriteLine(part);
+            }
+
+            Console.WriteLine();
+
+            foreach (var part in document.ConnvertToLaText())
+            {
+                Console.WriteLine(part);
+            }
 
             Console.ReadLine();
         }
