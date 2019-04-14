@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace Task1.Solution.Interfaces
+namespace Task1.Solution.Interfaces.Service
 {
     public interface IPasswordCreateService
     {
-        Tuple<bool, string> AddPassword(string password);
+        Tuple<bool, IEnumerable<string>> AddPassword(string password);
     }
 }
